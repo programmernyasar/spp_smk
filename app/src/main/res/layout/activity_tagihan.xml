@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_300"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimary">
+
+        <!--Top Header Layout-->
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/icon_back"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:layout_alignParentLeft="true"
+                android:padding="10dp"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Tagihan"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/spinnerTahunAjaran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/spinner_bg"
+            android:popupBackground="@color/grey_5"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            app:smsp_enableErrorLabel="false"
+            app:smsp_enableFloatingLabel="false"
+            app:smsp_hint="Pilih Tahun Ajaran"
+            app:smsp_alignLabel="true"
+            app:smsp_arrowPaddingTop="5dp"
+            app:smsp_hintColor="@color/black"
+            app:smsp_itemListHintBackgroundColor="@color/grey_10"
+            app:smsp_itemListHintColor="@color/black"
+            app:smsp_itemColor="@color/black"
+            app:smsp_itemListColor="@color/black"
+            app:smsp_multilineError="false"
+            app:smsp_selectedItemListColor="@color/colorPrimary" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_progress_tagihan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_margin="@dimen/spacing_medium"
+        android:orientation="vertical">
+
+        <com.kulodev.smkppi.widget.ViewLoadingDotsFade
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_tagihan"
+            android:layout_width="match_parent"
+            android:paddingTop="@dimen/spacing_large"
+            android:paddingBottom="@dimen/spacing_middle"
+            android:nestedScrollingEnabled="true"
+            android:layout_height="match_parent"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

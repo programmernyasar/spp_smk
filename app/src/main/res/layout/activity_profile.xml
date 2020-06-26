@@ -1,0 +1,794 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_300"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/spacing_xxlarge">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/background"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/profile_background">
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:tint="@color/white"
+                    android:layout_margin="25dp"
+                    android:src="@drawable/ic_arrow_back" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/liner_profileimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/background"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-100dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile"
+                    civ_border_width="2dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="#FFFFFF"
+                    android:src="@drawable/default_profile"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/liner_profileimage"
+                android:layout_marginTop="5dp"
+                android:background="@color/grey_300"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_xlarge"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardElevation="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Data User"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:paddingTop="16dp"
+                                android:textColor="@color/grey1"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:id="@+id/tv_id_profile_header"
+                                android:paddingLeft="16dp"
+                                android:text="Muhammad Tio Laksono"
+                                android:paddingRight="16dp"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:textColor="@color/grey1"
+                                android:id="@+id/tv_nama_profile_header"
+                                android:text="programmer.nyasar@gmail.com"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="8dp"/>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        android:layout_marginBottom="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Data Siswa"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:paddingTop="16dp"
+                                android:textColor="@color/grey1"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="NIS:"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:id="@+id/tv_nis_profile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="end"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="end"
+                                    android:text="102030"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:paddingBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nama:"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:id="@+id/tv_nama_profile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:text="Muhammad Tio Laksono"
+                                    android:gravity="end"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:paddingBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jenis Kelamin:"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_jenis_kelamin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:text="Laki-Laki"
+                                    android:gravity="end"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:paddingBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kelas:"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:text="X ( TKJ )"
+                                    android:gravity="end"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_kelas_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:paddingBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tahun Ajaran:"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:text="2019 / 2020"
+                                    android:gravity="end"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_tahun_ajaran_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:paddingBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kelahiran:"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:text="Muhammad Tio Laksono"
+                                    android:gravity="end"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_kelahiran_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardElevation="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kontak Siswa"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:paddingTop="16dp"
+                                android:textColor="@color/grey1"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Email"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:gravity="end"
+                                    android:text="programmer.nyasar@gmail.com"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_email_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No HP:"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:gravity="end"
+                                    android:text="087810990165"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_hp_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:paddingBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Alamat:"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="end"
+                                    android:layout_gravity="end"
+                                    android:text="Prm. Mekarasri 1 Blok B2/No. 15 \n Kel. Mekarbakti Kec. Panongan Kab. Tangerang - Banten 15710"
+                                    android:paddingTop="8dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_alamat_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardElevation="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Data Orangtua"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:paddingTop="16dp"
+                                android:textColor="@color/grey1"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bapak"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:gravity="end"
+                                    android:text="Sarno"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_bapak_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ibu:"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:gravity="end"
+                                    android:text="Hatikah"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_ibu_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No. HP:"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:gravity="end"
+                                    android:text="087810990165"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_hp_wali_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Email :"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:gravity="end"
+                                    android:text="programmer.nyasar@gmail.com"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="8dp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_email_wali_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:paddingBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Alamat:"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/grey1"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="end"
+                                    android:layout_gravity="end"
+                                    android:text="Prm. Mekarasri 1 Blok B2/No. 15 \n Kel. Mekarbakti Kec. Panongan Kab. Tangerang - Banten 15710"
+                                    android:paddingTop="8dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_alamat_wali_profile"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/btn_edt_profile"
+        style="@style/RippleStyleWhite"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="EDIT PROFILE"
+            android:textStyle="bold"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textColor="@android:color/white" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

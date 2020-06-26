@@ -1,0 +1,331 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_300"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/background"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/profile_background">
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:tint="@color/white"
+                    android:layout_margin="25dp"
+                    android:src="@drawable/ic_arrow_back" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/liner_profileimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/background"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-100dp"
+                android:orientation="horizontal"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile"
+                    civ_border_width="2dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="#FFFFFF"
+                    android:src="@drawable/tio" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_img_upload_foto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/ic_image"
+                    android:tint="@color/white"
+                    android:backgroundTint="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/liner_profileimage"
+                android:layout_marginTop="5dp"
+                android:padding="@dimen/spacing_middle"
+                android:background="@color/grey_300"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="Nama" />
+
+                <EditText
+                    android:id="@+id/edt_nama_siswa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:hint="Nama"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="Jenis Kelamin" />
+
+                <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                    android:id="@+id/spinner_jenis_kelamin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:popupBackground="@color/grey_5"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="viewStart"
+                    app:smsp_enableErrorLabel="false"
+                    app:smsp_hintSize="17dp"
+                    app:smsp_itemSize="17dp"
+                    app:smsp_enableFloatingLabel="false"
+                    app:smsp_hint="Jenis Kelamin"
+                    app:smsp_alignLabel="true"
+                    app:smsp_arrowPaddingTop="15dp"
+                    app:smsp_hintColor="@color/grey_900"
+                    app:smsp_itemListHintBackgroundColor="@color/grey_10"
+                    app:smsp_itemListHintColor="@color/black"
+                    app:smsp_itemColor="@color/black"
+                    app:smsp_itemListColor="@color/black"
+                    app:smsp_multilineError="false"
+                    app:smsp_selectedItemListColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="Tempat Lahir" />
+
+                <EditText
+                    android:id="@+id/edt_tempat_lahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:hint="Tempat Lahir"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="Tanggal Lahir" />
+
+                <EditText
+                    android:id="@+id/edt_tanggal_lahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:hint="Tanggal Lahir"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:focusable="false"
+                    android:paddingLeft="15dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="Email" />
+
+                <EditText
+                    android:id="@+id/edt_email_siswa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="No. HP" />
+                <EditText
+                    android:id="@+id/edt_hp_siswa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:hint="Nomor Handphone"
+                    android:inputType="number"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="Alamat" />
+                <EditText
+                    android:id="@+id/edt_alamat_siswa"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:gravity="start"
+                    android:hint="Alamat Siswa"
+                    android:inputType="textPostalAddress"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="Bapak" />
+
+                <EditText
+                    android:id="@+id/edt_bapak_siswa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:hint="Bapak"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="Ibu" />
+
+                <EditText
+                    android:id="@+id/edt_ibu_siswa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:hint="Ibu"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="No. HP Wali" />
+
+                <EditText
+                    android:id="@+id/edt_hp_wali"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:hint="Nomor Handphone"
+                    android:inputType="number"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="Alamat Wali" />
+
+                <EditText
+                    android:id="@+id/edt_alamat_wali"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/editext_rounder_courner"
+                    android:gravity="start"
+                    android:hint="Alamat Wali"
+                    android:inputType="textPostalAddress"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/btn_save_profile"
+        style="@style/RippleStyleWhite"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="SIMPAN"
+            android:textStyle="bold"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textColor="@android:color/white" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

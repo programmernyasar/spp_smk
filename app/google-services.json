@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "991768971980",
+    "firebase_url": "https://spp-smk-ppi.firebaseio.com",
+    "project_id": "spp-smk-ppi",
+    "storage_bucket": "spp-smk-ppi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991768971980:android:401862d767bea1ee801069",
+        "android_client_info": {
+          "package_name": "com.kulodev.smkppi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991768971980-754fudlssvt63fil8nh4tmg1q8n8a59j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kulodev.smkppi",
+            "certificate_hash": "2d112c982ebcde334bd41679764ae65fdafebf77"
+          }
+        },
+        {
+          "client_id": "991768971980-b7u5bnkm192g0tc32vvj36gstoml99ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX567WEsvUiL0htNmkLrA7ijWmjEU55-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991768971980-b7u5bnkm192g0tc32vvj36gstoml99ri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

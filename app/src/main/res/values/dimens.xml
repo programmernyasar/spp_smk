@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="actionBarSize">56dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">200dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="viewpager_margin_overlap">-60dp</dimen>
+    <dimen name="viewpager_margin_overlap_payment">-30dp</dimen>
+
+    <!--genaral spacing-->
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_small">3dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_xmedium">7dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_smlarge">18dp</dimen>
+    <dimen name="spacing_mlarge">20dp</dimen>
+    <dimen name="spacing_mxlarge">25dp</dimen>
+    <dimen name="spacing_xlarge">35dp</dimen>
+    <dimen name="spacing_xmlarge">40dp</dimen>
+    <dimen name="spacing_xxlarge">50dp</dimen>
+    <dimen name="spacing_xxxlarge">55dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+
+    <dimen name="margin_left_16">16dp</dimen>
+    <dimen name="margin_right_16">16dp</dimen>
+    <dimen name="margin_top_16">16dp</dimen>
+    <dimen name="margin_bottom_16">16dp</dimen>
+
+    <dimen name="margin_top_8">8dp</dimen>
+    <dimen name="margin_bottom_8">8dp</dimen>
+    <dimen name="margin_left_8">8dp</dimen>
+    <dimen name="margin_right_8">8dp</dimen>
+
+    <dimen name="margin_top_4">4dp</dimen>
+    <dimen name="margin_bottom_4">4dp</dimen>
+    <dimen name="margin_left_4">4dp</dimen>
+    <dimen name="margin_right_4">4dp</dimen>
+
+    <dimen name="margin_top_5">5dp</dimen>
+
+    <dimen name="radius_2">2dp</dimen>
+    <dimen name="radius_8">8dp</dimen>
+    <dimen name="radius_16">16dp</dimen>
+    <dimen name="radius_24">24dp</dimen>
+    <dimen name="radius_32">32dp</dimen>
+
+    <dimen name="padding_1">1dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_14">14dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+
+    <dimen name="text_16">16dp</dimen>
+    <dimen name="text_14">14dp</dimen>
+    <dimen name="text_12">12dp</dimen>
+    <dimen name="text_18">18dp</dimen>
+    <dimen name="text_20">20dp</dimen>
+    <dimen name="text_22">22dp</dimen>
+    <dimen name="text_24">24dp</dimen>
+    <dimen name="text_26">26dp</dimen>
+
+    <dimen name="dimen_1">1dp</dimen>
+    <dimen name="lineSpacingExtra_4">4dp</dimen>
+
+
+    <dimen name="viewportWidth">24.0</dimen>
+    <dimen name="viewportHeight">24.0</dimen>
+
+
+    <dimen name="vector_height">24dp</dimen>
+    <dimen name="vector_width">24dp</dimen>
+
+</resources>
