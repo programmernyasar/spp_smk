@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.Dialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -399,28 +402,25 @@ public class HomeActivity extends AppCompatActivity {
     // Notification
 
     private void getCurrentFirebaseToken(){
+
         FirebaseInstanceId.getInstance().getInstanceId()
                 .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
                     @Override
                     public void onComplete(@NonNull Task<InstanceIdResult> task) {
                         if (!task.isSuccessful()) {
-                            Log.w("TAG", "getInstanceId failed", task.getException());
+                            Log.e("Token FCM Now", "Gagal Get Token", task.getException());
                             return;
                         }
 
                         // Get new Instance ID token
                         String token = task.getResult().getToken();
-                        Log.e("currentToken", token);
-
-                        // Log and toast
-                        String msg = getString(R.string.msg_token_fmt, token);
-                        Log.d("TAG", msg);
-                        Toast.makeText(HomeActivity.this, msg, Toast.LENGTH_SHORT).show();
+                        Log.e("Token FCM Now", token);
                     }
                 });
     }
 
 
+    // Dialog All Menu
 
         /* Dialog Show All Menu
     private void dialogShowAllMenu() {
