@@ -116,7 +116,9 @@ public class TagihanActivity extends AppCompatActivity {
                         spinner_tahun_ajaran.setSelection(0);
 
                     }else{
-                        Toast.makeText(TagihanActivity.this, "Server Bermasalah",Toast.LENGTH_LONG).show();
+                        RlistTagihan.setVisibility(View.INVISIBLE);
+                        Toast.makeText(TagihanActivity.this, "Sistem Sedang Bermasalah",Toast.LENGTH_LONG).show();
+
                     }
                 }
             }
